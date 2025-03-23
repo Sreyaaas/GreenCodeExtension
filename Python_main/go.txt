@@ -1,0 +1,15 @@
+#!/bin/sh
+# Analyze staged Python files for sustainability
+STAGED_FILES=$(git diff --name-only --cached -- "*.py")
+if [ -n "$STAGED_FILES" ]; then
+  while IFS= read -r file; do
+    echo "Analyzing staged file: $file"
+    python main.py "$file"
+    if [ $? -ne 0 ]; then
+      echo "Sustainability analysis failed for: $file"
+      exit 1
+    fi
+  done <<< "$STAGED_FILES"
+else
+  echo "No staged Python files to analyze."
+fi
