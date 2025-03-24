@@ -1,72 +1,65 @@
-# Sustainable Code Analyzer with Husky Git Hooks
+# greencodeai README
 
-This project automates code sustainability analysis using the **Groq API** and integrates **Husky** to enforce automated checks before commits.
+This is the README for your extension "greencodeai". After writing up a brief description, we recommend including the following sections.
 
 ## Features
-- **Analyzes Python code** for sustainability improvements.
-- **Uses Groq API** to optimize code for efficiency.
-- **Husky pre-commit hook** ensures every commit is analyzed.
-- **Automated file updates** with optimized code.
 
-## Installation
+Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
 
-### 1. Clone the Repository
-```sh
-git clone <your-repository-url>
-cd <your-repository-name>
-```
+For example if there is an image subfolder under your extension project workspace:
 
-### 2. Install Dependencies
-```sh
-npm install
-```
+\!\[feature X\]\(images/feature-x.png\)
 
-### 3. Setup Husky
-```sh
-npx husky-init && npm install
-```
+> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
 
-### 4. Add a Pre-commit Hook
-Create a pre-commit hook file:
-```sh
-npx husky add .husky/pre-commit "python main.py"
-```
+## Requirements
 
-Make it executable (Linux/Mac):
-```sh
-chmod +x .husky/pre-commit
-```
+If you have any requirements or dependencies, add a section describing those and how to install and configure them.
 
-## Usage
+## Extension Settings
 
-### Run the Analysis Manually
-```sh
-python main.py path/to/your/code.py
-```
+Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
 
-### Test the Husky Pre-commit Hook
-Try committing a file:
-```sh
-git add .
-git commit -m "Test commit"
-```
-If your code does not meet sustainability standards, the commit will be blocked until the code is optimized.
+For example:
 
-## Project Structure
-```
-/green-code
-│── main.py           # Main script for sustainability analysis
-│── bubble.py         # Sample script to test analysis
-│── .husky/pre-commit # Git hook for automated checks
-│── package.json      # Node.js dependencies and Husky config
-│── package-lock.json # Lockfile for dependencies
-│── .gitignore        # Ignore unnecessary files
-```
+This extension contributes the following settings:
 
-## License
-This project is licensed under the **MIT License**.
+* `myExtension.enable`: Enable/disable this extension.
+* `myExtension.thing`: Set to `blah` to do something.
 
-## Contributing
-Feel free to submit pull requests or report issues!
+## Known Issues
 
-```
+Calling out known issues can help limit users opening duplicate issues against your extension.
+
+## Release Notes
+
+Users appreciate release notes as you update your extension.
+
+### 1.0.0
+
+Initial release of ...
+
+### 1.0.1
+
+Fixed issue #.
+
+### 1.1.0
+
+Added features X, Y, and Z.
+
+---
+
+## Working with Markdown
+
+You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
+
+* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
+* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
+* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
+
+## For more information
+
+* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
+* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+
+**Enjoy!**
